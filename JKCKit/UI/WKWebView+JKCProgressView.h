@@ -13,5 +13,4 @@
 @property (class, nonatomic, assign, getter=isShowProgressView) BOOL showProgressView;
 @property (nonatomic, assign, getter=isShowProgressView) BOOL showProgressView;
 @property (nonatomic, strong, nullable) UIProgressView *progressView;
-@property (class, nonatomic, strong, nullable) UIProgressView *progressView;
 @end

@@ -21,11 +21,11 @@ static NSString *key = @"Block";
     }
 }
 
-- (ActionBlock)jkc_actionBlock {
+- (ActionBlock)actionBlock {
     return objc_getAssociatedObject(self, (__bridge const void * _Nonnull)(key));
 }
 
-- (void)controlAction:(id)sender {
+- (void)jkc_actionBlock:(id)sender {
     if (self.actionBlock) {
         self.actionBlock(sender);
     }

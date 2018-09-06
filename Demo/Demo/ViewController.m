@@ -21,7 +21,12 @@
 
 #pragma mark -
 - (NSArray *)tableViewTitles {
-    return @[@"UIControl+Block", @"UIAlert+Block", @"UIAlert+UIActivityIndicatorView", @"UIAlert+UIProgressView", @"WKWebview+UIProgressView"];
+    return @[@"UIControl+Block",
+             @"UIAlert+Block",
+             @"UIAlert+UIActivityIndicatorView",
+             @"UIAlert+UIProgressView",
+             @"WKWebview+UIProgressView",
+             @"NSTimer+JKCBlock"];
 }
 
 #pragma mark -
@@ -80,6 +85,17 @@
             break;
         case 4: {
             [self performSegueWithIdentifier:@"WKWebView+UIProgressView" sender:nil];
+        }
+            break;
+        case 5: {
+            int __block i = 0;
+            [NSTimer jkc_scheduledTimerWithTimeInterval:1.0f userInfo:@{@"a":@"b"} repeats:YES actionBlock:^(NSTimer *timer) {
+                NSLog(@"%@ \n %@",timer, timer.userInfo);
+                if (i > 5) {
+                    [timer invalidate];
+                }
+                i++;
+            }];
         }
             break;
     }

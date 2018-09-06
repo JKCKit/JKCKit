@@ -29,14 +29,12 @@
     self.wkwebView.showProgressView = NO;
     self.wkwebView.progressView.progressTintColor = [UIColor orangeColor];
     
+    WeakObject(self)
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"instanceProgressView" style:UIBarButtonItemStylePlain actionBlock:^(id sender) {
+        StrongObject(self)
         [self.navigationController pushViewController:[JKCWKWebViewProgressViewController1 new] animated:YES];
     }];
     self.navigationItem.rightBarButtonItem = item;
-}
-
-- (void)pushInstanceProgressView {
-//    [self.navigationController pushViewController:[JKCWKWebViewProgressViewController1 new] animated:YES];
 }
 
 - (WKWebView *)wkwebView {

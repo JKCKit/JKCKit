@@ -21,6 +21,7 @@
 		14943392213E17210013B6E1 /* WKWebView+JKCProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14943391213E17210013B6E1 /* WKWebView+JKCProgressView.m */; };
 		14943395213E2C1A0013B6E1 /* JKCWKWebViewProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14943394213E2C1A0013B6E1 /* JKCWKWebViewProgressViewController.m */; };
 		14943398213E6FF90013B6E1 /* UIBarButtonItem+JKCBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 14943397213E6FF90013B6E1 /* UIBarButtonItem+JKCBlock.m */; };
+		149433D9213F86A60013B6E1 /* NSTimer+JKCBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 149433D8213F86A60013B6E1 /* NSTimer+JKCBlock.m */; };
 		5B0A00425E266FC793C40947 /* libPods-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF9CF3E79CBD505DA6BA42D /* libPods-Demo.a */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,8 @@
 		14943394213E2C1A0013B6E1 /* JKCWKWebViewProgressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKCWKWebViewProgressViewController.m; sourceTree = "<group>"; };
 		14943396213E6FF90013B6E1 /* UIBarButtonItem+JKCBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+JKCBlock.h"; sourceTree = "<group>"; };
 		14943397213E6FF90013B6E1 /* UIBarButtonItem+JKCBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+JKCBlock.m"; sourceTree = "<group>"; };
+		149433D7213F86A60013B6E1 /* NSTimer+JKCBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+JKCBlock.h"; sourceTree = "<group>"; };
+		149433D8213F86A60013B6E1 /* NSTimer+JKCBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+JKCBlock.m"; sourceTree = "<group>"; };
 		28C906B2EAE0D5E38FDA5EFF /* libPods-DemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B40C6F889C4E53DCC2C64CA /* libPods-DemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF9CF3E79CBD505DA6BA42D /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +191,8 @@
 				14943391213E17210013B6E1 /* WKWebView+JKCProgressView.m */,
 				14943396213E6FF90013B6E1 /* UIBarButtonItem+JKCBlock.h */,
 				14943397213E6FF90013B6E1 /* UIBarButtonItem+JKCBlock.m */,
+				149433D7213F86A60013B6E1 /* NSTimer+JKCBlock.h */,
+				149433D8213F86A60013B6E1 /* NSTimer+JKCBlock.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14943345213646870013B6E1 /* ViewController.m in Sources */,
+				149433D9213F86A60013B6E1 /* NSTimer+JKCBlock.m in Sources */,
 				14943398213E6FF90013B6E1 /* UIBarButtonItem+JKCBlock.m in Sources */,
 				149433892137CC8D0013B6E1 /* UIAlertController+JKCConvenient.m in Sources */,
 				14943350213646890013B6E1 /* main.m in Sources */,

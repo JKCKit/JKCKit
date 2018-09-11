@@ -17,3 +17,5 @@
 #import "WKWebView+JKCProgressView.h"
 #import "UIBarButtonItem+JKCBlock.h"
 #import "NSTimer+JKCBlock.h"
+#import "UIColor+JKCUtils.h"
+#import "UIView+JKCUtils.h"

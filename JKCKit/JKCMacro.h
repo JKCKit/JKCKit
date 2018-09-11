@@ -12,5 +12,5 @@
 #endif /* JKCMacro_h */
 
 
-#define WeakObject(object)  __weak typeof(object) object##Weak = object;
-#define StrongObject(object)  __strong typeof(object) object = object##Weak;
+#define JKCWeakObject(object)  __weak typeof(object) object##Weak = object;
+#define JKCStrongObject(object)  __strong typeof(object) object = object##Weak;

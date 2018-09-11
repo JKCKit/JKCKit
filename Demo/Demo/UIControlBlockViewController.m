@@ -8,9 +8,16 @@
 
 #import "UIControlBlockViewController.h"
 #import "JKCKit.h"
-@interface UIControlBlockViewController ()
+#import "JKCTestTableViewController.h"
+@interface UIControlBlockViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIButton *button;
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UISlider *fontSslider;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @end
 
 @implementation UIControlBlockViewController
@@ -20,21 +27,25 @@
     [self.button jkc_addActionBlock:^(id sender) {
         NSLog(@"tap");
     } forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.navigationController pushViewController:[JKCTestTableViewController new] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)fontSliderAction:(UISlider *)sender {
+    self.label.font = [UIFont systemFontOfSize:100 * sender.value];
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 5;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    return cell;
+}
 
 @end

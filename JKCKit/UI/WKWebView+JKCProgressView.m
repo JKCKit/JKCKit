@@ -16,7 +16,7 @@ static NSString *instancehowProgressViewKey = @"instancehowProgressViewKey";
 @implementation WKWebView (JKCProgressView)
 
 + (void)setShowProgressView:(BOOL)showProgressView {
-    objc_setAssociatedObject(self, (__bridge const void * _Nonnull)(classShowProgressViewKey), @(showProgressView), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, (__bridge const void * _Nonnull)(classShowProgressViewKey), @(showProgressView), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 + (BOOL)isShowProgressView {
@@ -24,7 +24,7 @@ static NSString *instancehowProgressViewKey = @"instancehowProgressViewKey";
 }
 
 - (void)setShowProgressView:(BOOL)showProgressView {
-    objc_setAssociatedObject(self, (__bridge const void * _Nonnull)(instancehowProgressViewKey), @(showProgressView), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, (__bridge const void * _Nonnull)(instancehowProgressViewKey), @(showProgressView), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [self addProgressView];
 }
 
@@ -65,7 +65,7 @@ static NSString *instancehowProgressViewKey = @"instancehowProgressViewKey";
     {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
-            Class class = [WKWebView class];
+            Class class = [self class];
             SEL originalSelector = @selector(didChangeValueForKey:);
             SEL swizzledSelector = @selector(jkc_progressViewDidChangeValueForKey:);
             Method originalMethod = class_getInstanceMethod(class, originalSelector);

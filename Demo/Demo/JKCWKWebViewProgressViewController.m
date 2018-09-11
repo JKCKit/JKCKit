@@ -24,14 +24,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    WKWebView.showProgressView = YES;
-    [self.wkwebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]]];
-    self.wkwebView.showProgressView = NO;
-    self.wkwebView.progressView.progressTintColor = [UIColor orangeColor];
     
-    WeakObject(self)
+    WKWebView.showProgressView = YES;
+    [self.wkwebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.apple.com"]]];
+    self.wkwebView.showProgressView = NO;
+    
+    JKCWeakObject(self)
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"instanceProgressView" style:UIBarButtonItemStylePlain actionBlock:^(id sender) {
-        StrongObject(self)
+        JKCStrongObject(self)
         [self.navigationController pushViewController:[JKCWKWebViewProgressViewController1 new] animated:YES];
     }];
     self.navigationItem.rightBarButtonItem = item;
@@ -79,7 +79,7 @@
 @implementation JKCWKWebViewProgressViewController1
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.wkwebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]]];
+    [self.wkwebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.apple.com"]]];
     self.wkwebView.showProgressView = NO;
     self.wkwebView.progressView.progressTintColor = [UIColor purpleColor];
 }

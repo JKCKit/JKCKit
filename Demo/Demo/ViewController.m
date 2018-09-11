@@ -26,7 +26,8 @@
              @"UIAlert+UIActivityIndicatorView",
              @"UIAlert+UIProgressView",
              @"WKWebview+UIProgressView",
-             @"NSTimer+JKCBlock"];
+             @"NSTimer+JKCBlock",
+             @"UIColor+JKCUtils"];
 }
 
 #pragma mark -
@@ -96,6 +97,11 @@
                 }
                 i++;
             }];
+        }
+            break;
+        case 6: {
+            UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+            cell.backgroundColor = [UIColor jkc_colorWithHexString:@"0x7FFF00"];
         }
             break;
     }

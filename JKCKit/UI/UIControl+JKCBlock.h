@@ -14,6 +14,10 @@ typedef void (^ActionBlock) (id sender);
 
 @property (nonatomic, copy, readonly) ActionBlock actionBlock;
 
+//点击间隔
+@property (assign, nonatomic) NSTimeInterval acceptEventInterval;
+
+
 - (void)jkc_addActionBlock:(_Nonnull ActionBlock)actionBlock
           forControlEvents:(UIControlEvents)controlEvents;
 

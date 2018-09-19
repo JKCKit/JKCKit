@@ -10,9 +10,6 @@
 
 @interface UIButton (JKCUtils)
 
-//设置按钮的点击间隔（防止连续点击)
-@property (assign, nonatomic) NSTimeInterval acceptEventInterval;
-
 //设置图片
 -(void)setNormolImage:(NSString*)normalImageName
        highlightImage:(NSString *)highlightImageName;

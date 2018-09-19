@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		140B36B32140C17E00497D1D /* UIColor+JKCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 140B36B22140C17E00497D1D /* UIColor+JKCUtils.m */; };
-		140B36B62142081100497D1D /* UILabel+JKCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 140B36B52142081100497D1D /* UILabel+JKCUtils.m */; };
 		140B36C32146117700497D1D /* UIView+JKCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 140B36C22146117700497D1D /* UIView+JKCUtils.m */; };
-		140B36C62146604C00497D1D /* WKWebView+JKCTipsText.m in Sources */ = {isa = PBXBuildFile; fileRef = 140B36C52146604C00497D1D /* WKWebView+JKCTipsText.m */; };
 		14943342213646870013B6E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14943341213646870013B6E1 /* AppDelegate.m */; };
 		14943345213646870013B6E1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14943344213646870013B6E1 /* ViewController.m */; };
 		14943348213646870013B6E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14943346213646870013B6E1 /* Main.storyboard */; };
@@ -32,6 +30,7 @@
 		431E876A2150D18900D307C7 /* UIView+ScreenshotAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E87682150D18900D307C7 /* UIView+ScreenshotAnimation.m */; };
 		431E876D2150D58200D307C7 /* UIViewController+NavItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E876C2150D58200D307C7 /* UIViewController+NavItem.m */; };
 		431E87702150E36600D307C7 /* UIButton+JKCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E876F2150E36600D307C7 /* UIButton+JKCUtils.m */; };
+		431E87772151EDA500D307C7 /* fh_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 431E87762151EDA500D307C7 /* fh_@3x.png */; };
 		5B0A00425E266FC793C40947 /* libPods-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF9CF3E79CBD505DA6BA42D /* libPods-Demo.a */; };
 /* End PBXBuildFile section */
 
@@ -55,12 +54,8 @@
 /* Begin PBXFileReference section */
 		140B36B12140C17E00497D1D /* UIColor+JKCUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+JKCUtils.h"; sourceTree = "<group>"; };
 		140B36B22140C17E00497D1D /* UIColor+JKCUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JKCUtils.m"; sourceTree = "<group>"; };
-		140B36B42142081100497D1D /* UILabel+JKCUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+JKCUtils.h"; sourceTree = "<group>"; };
-		140B36B52142081100497D1D /* UILabel+JKCUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JKCUtils.m"; sourceTree = "<group>"; };
 		140B36C12146117700497D1D /* UIView+JKCUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+JKCUtils.h"; sourceTree = "<group>"; };
 		140B36C22146117700497D1D /* UIView+JKCUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKCUtils.m"; sourceTree = "<group>"; };
-		140B36C42146604C00497D1D /* WKWebView+JKCTipsText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WKWebView+JKCTipsText.h"; sourceTree = "<group>"; };
-		140B36C52146604C00497D1D /* WKWebView+JKCTipsText.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+JKCTipsText.m"; sourceTree = "<group>"; };
 		1494333D213646870013B6E1 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14943340213646870013B6E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14943341213646870013B6E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -106,6 +101,7 @@
 		431E876C2150D58200D307C7 /* UIViewController+NavItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavItem.m"; sourceTree = "<group>"; };
 		431E876E2150E36600D307C7 /* UIButton+JKCUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+JKCUtils.h"; sourceTree = "<group>"; };
 		431E876F2150E36600D307C7 /* UIButton+JKCUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JKCUtils.m"; sourceTree = "<group>"; };
+		431E87762151EDA500D307C7 /* fh_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fh_@3x.png"; sourceTree = "<group>"; };
 		4B40C6F889C4E53DCC2C64CA /* libPods-DemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF9CF3E79CBD505DA6BA42D /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E3CBC75800C7E13AF5F636 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +159,7 @@
 		1494333F213646870013B6E1 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				431E87762151EDA500D307C7 /* fh_@3x.png */,
 				1494338D213D34120013B6E1 /* UIControlBlockViewController.h */,
 				1494338E213D34120013B6E1 /* UIControlBlockViewController.m */,
 				14943372213646AB0013B6E1 /* JKCKit */,
@@ -229,12 +226,8 @@
 				149433D8213F86A60013B6E1 /* NSTimer+JKCBlock.m */,
 				140B36B12140C17E00497D1D /* UIColor+JKCUtils.h */,
 				140B36B22140C17E00497D1D /* UIColor+JKCUtils.m */,
-				140B36B42142081100497D1D /* UILabel+JKCUtils.h */,
-				140B36B52142081100497D1D /* UILabel+JKCUtils.m */,
 				140B36C12146117700497D1D /* UIView+JKCUtils.h */,
 				140B36C22146117700497D1D /* UIView+JKCUtils.m */,
-				140B36C42146604C00497D1D /* WKWebView+JKCTipsText.h */,
-				140B36C52146604C00497D1D /* WKWebView+JKCTipsText.m */,
 				431E87652150D18800D307C7 /* UIImage+JKCUtils.h */,
 				431E87662150D18800D307C7 /* UIImage+JKCUtils.m */,
 				431E87672150D18800D307C7 /* UIView+ScreenshotAnimation.h */,
@@ -372,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431E87772151EDA500D307C7 /* fh_@3x.png in Resources */,
 				1494334D213646890013B6E1 /* LaunchScreen.storyboard in Resources */,
 				1494334A213646890013B6E1 /* Assets.xcassets in Resources */,
 				14943348213646870013B6E1 /* Main.storyboard in Resources */,
@@ -443,8 +437,6 @@
 				149433D9213F86A60013B6E1 /* NSTimer+JKCBlock.m in Sources */,
 				431E876D2150D58200D307C7 /* UIViewController+NavItem.m in Sources */,
 				431E87702150E36600D307C7 /* UIButton+JKCUtils.m in Sources */,
-				140B36B62142081100497D1D /* UILabel+JKCUtils.m in Sources */,
-				140B36C62146604C00497D1D /* WKWebView+JKCTipsText.m in Sources */,
 				14943398213E6FF90013B6E1 /* UIBarButtonItem+JKCBlock.m in Sources */,
 				431E87692150D18900D307C7 /* UIImage+JKCUtils.m in Sources */,
 				14AA6B772151ED9300EF7228 /* NSDate+JKCUtils.m in Sources */,

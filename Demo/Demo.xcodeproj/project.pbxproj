@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		140B36B32140C17E00497D1D /* UIColor+JKCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 140B36B22140C17E00497D1D /* UIColor+JKCUtils.m */; };
 		140B36B62142081100497D1D /* UILabel+JKCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 140B36B52142081100497D1D /* UILabel+JKCUtils.m */; };
-		140B36BA21460CF400497D1D /* JKCTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 140B36B821460CF400497D1D /* JKCTestTableViewController.m */; };
-		140B36BB21460CF400497D1D /* JKCTestTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 140B36B921460CF400497D1D /* JKCTestTableViewController.xib */; };
-		140B36BF21460D1A00497D1D /* JKCTestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 140B36BD21460D1A00497D1D /* JKCTestTableViewCell.m */; };
-		140B36C021460D1A00497D1D /* JKCTestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 140B36BE21460D1A00497D1D /* JKCTestTableViewCell.xib */; };
 		140B36C32146117700497D1D /* UIView+JKCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 140B36C22146117700497D1D /* UIView+JKCUtils.m */; };
 		140B36C62146604C00497D1D /* WKWebView+JKCTipsText.m in Sources */ = {isa = PBXBuildFile; fileRef = 140B36C52146604C00497D1D /* WKWebView+JKCTipsText.m */; };
 		14943342213646870013B6E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14943341213646870013B6E1 /* AppDelegate.m */; };
@@ -30,6 +26,8 @@
 		14943395213E2C1A0013B6E1 /* JKCWKWebViewProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14943394213E2C1A0013B6E1 /* JKCWKWebViewProgressViewController.m */; };
 		14943398213E6FF90013B6E1 /* UIBarButtonItem+JKCBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 14943397213E6FF90013B6E1 /* UIBarButtonItem+JKCBlock.m */; };
 		149433D9213F86A60013B6E1 /* NSTimer+JKCBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 149433D8213F86A60013B6E1 /* NSTimer+JKCBlock.m */; };
+		14AA6B762151ED9300EF7228 /* UIGestureRecognizer+JKCBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AA6B742151ED9300EF7228 /* UIGestureRecognizer+JKCBlock.m */; };
+		14AA6B772151ED9300EF7228 /* NSDate+JKCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AA6B752151ED9300EF7228 /* NSDate+JKCUtils.m */; };
 		431E87692150D18900D307C7 /* UIImage+JKCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E87662150D18800D307C7 /* UIImage+JKCUtils.m */; };
 		431E876A2150D18900D307C7 /* UIView+ScreenshotAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E87682150D18900D307C7 /* UIView+ScreenshotAnimation.m */; };
 		431E876D2150D58200D307C7 /* UIViewController+NavItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E876C2150D58200D307C7 /* UIViewController+NavItem.m */; };
@@ -59,12 +57,6 @@
 		140B36B22140C17E00497D1D /* UIColor+JKCUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JKCUtils.m"; sourceTree = "<group>"; };
 		140B36B42142081100497D1D /* UILabel+JKCUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+JKCUtils.h"; sourceTree = "<group>"; };
 		140B36B52142081100497D1D /* UILabel+JKCUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JKCUtils.m"; sourceTree = "<group>"; };
-		140B36B721460CF400497D1D /* JKCTestTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKCTestTableViewController.h; sourceTree = "<group>"; };
-		140B36B821460CF400497D1D /* JKCTestTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKCTestTableViewController.m; sourceTree = "<group>"; };
-		140B36B921460CF400497D1D /* JKCTestTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JKCTestTableViewController.xib; sourceTree = "<group>"; };
-		140B36BC21460D1A00497D1D /* JKCTestTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKCTestTableViewCell.h; sourceTree = "<group>"; };
-		140B36BD21460D1A00497D1D /* JKCTestTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKCTestTableViewCell.m; sourceTree = "<group>"; };
-		140B36BE21460D1A00497D1D /* JKCTestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JKCTestTableViewCell.xib; sourceTree = "<group>"; };
 		140B36C12146117700497D1D /* UIView+JKCUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+JKCUtils.h"; sourceTree = "<group>"; };
 		140B36C22146117700497D1D /* UIView+JKCUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKCUtils.m"; sourceTree = "<group>"; };
 		140B36C42146604C00497D1D /* WKWebView+JKCTipsText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WKWebView+JKCTipsText.h"; sourceTree = "<group>"; };
@@ -101,6 +93,10 @@
 		14943397213E6FF90013B6E1 /* UIBarButtonItem+JKCBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+JKCBlock.m"; sourceTree = "<group>"; };
 		149433D7213F86A60013B6E1 /* NSTimer+JKCBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+JKCBlock.h"; sourceTree = "<group>"; };
 		149433D8213F86A60013B6E1 /* NSTimer+JKCBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+JKCBlock.m"; sourceTree = "<group>"; };
+		14AA6B722151ED9300EF7228 /* NSDate+JKCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKCUtils.h"; sourceTree = "<group>"; };
+		14AA6B732151ED9300EF7228 /* UIGestureRecognizer+JKCBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+JKCBlock.h"; sourceTree = "<group>"; };
+		14AA6B742151ED9300EF7228 /* UIGestureRecognizer+JKCBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+JKCBlock.m"; sourceTree = "<group>"; };
+		14AA6B752151ED9300EF7228 /* NSDate+JKCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKCUtils.m"; sourceTree = "<group>"; };
 		28C906B2EAE0D5E38FDA5EFF /* libPods-DemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		431E87652150D18800D307C7 /* UIImage+JKCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JKCUtils.h"; sourceTree = "<group>"; };
 		431E87662150D18800D307C7 /* UIImage+JKCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JKCUtils.m"; sourceTree = "<group>"; };
@@ -181,12 +177,6 @@
 				1494334F213646890013B6E1 /* main.m */,
 				14943393213E2C1A0013B6E1 /* JKCWKWebViewProgressViewController.h */,
 				14943394213E2C1A0013B6E1 /* JKCWKWebViewProgressViewController.m */,
-				140B36B721460CF400497D1D /* JKCTestTableViewController.h */,
-				140B36B821460CF400497D1D /* JKCTestTableViewController.m */,
-				140B36B921460CF400497D1D /* JKCTestTableViewController.xib */,
-				140B36BC21460D1A00497D1D /* JKCTestTableViewCell.h */,
-				140B36BD21460D1A00497D1D /* JKCTestTableViewCell.m */,
-				140B36BE21460D1A00497D1D /* JKCTestTableViewCell.xib */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -223,6 +213,10 @@
 		149433832137CB520013B6E1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				14AA6B722151ED9300EF7228 /* NSDate+JKCUtils.h */,
+				14AA6B752151ED9300EF7228 /* NSDate+JKCUtils.m */,
+				14AA6B732151ED9300EF7228 /* UIGestureRecognizer+JKCBlock.h */,
+				14AA6B742151ED9300EF7228 /* UIGestureRecognizer+JKCBlock.m */,
 				149433842137CB520013B6E1 /* UIControl+JKCBlock.h */,
 				149433852137CB520013B6E1 /* UIControl+JKCBlock.m */,
 				149433872137CC8D0013B6E1 /* UIAlertController+JKCConvenient.h */,
@@ -378,10 +372,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				140B36C021460D1A00497D1D /* JKCTestTableViewCell.xib in Resources */,
 				1494334D213646890013B6E1 /* LaunchScreen.storyboard in Resources */,
 				1494334A213646890013B6E1 /* Assets.xcassets in Resources */,
-				140B36BB21460CF400497D1D /* JKCTestTableViewController.xib in Resources */,
 				14943348213646870013B6E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,17 +444,17 @@
 				431E876D2150D58200D307C7 /* UIViewController+NavItem.m in Sources */,
 				431E87702150E36600D307C7 /* UIButton+JKCUtils.m in Sources */,
 				140B36B62142081100497D1D /* UILabel+JKCUtils.m in Sources */,
-				140B36BF21460D1A00497D1D /* JKCTestTableViewCell.m in Sources */,
 				140B36C62146604C00497D1D /* WKWebView+JKCTipsText.m in Sources */,
-				140B36BA21460CF400497D1D /* JKCTestTableViewController.m in Sources */,
 				14943398213E6FF90013B6E1 /* UIBarButtonItem+JKCBlock.m in Sources */,
 				431E87692150D18900D307C7 /* UIImage+JKCUtils.m in Sources */,
+				14AA6B772151ED9300EF7228 /* NSDate+JKCUtils.m in Sources */,
 				149433892137CC8D0013B6E1 /* UIAlertController+JKCConvenient.m in Sources */,
 				14943350213646890013B6E1 /* main.m in Sources */,
 				149433862137CB520013B6E1 /* UIControl+JKCBlock.m in Sources */,
 				140B36C32146117700497D1D /* UIView+JKCUtils.m in Sources */,
 				431E876A2150D18900D307C7 /* UIView+ScreenshotAnimation.m in Sources */,
 				1494338F213D34120013B6E1 /* UIControlBlockViewController.m in Sources */,
+				14AA6B762151ED9300EF7228 /* UIGestureRecognizer+JKCBlock.m in Sources */,
 				14943392213E17210013B6E1 /* WKWebView+JKCProgressView.m in Sources */,
 				14943395213E2C1A0013B6E1 /* JKCWKWebViewProgressViewController.m in Sources */,
 				14943342213646870013B6E1 /* AppDelegate.m in Sources */,

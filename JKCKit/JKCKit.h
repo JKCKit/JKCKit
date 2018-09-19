@@ -19,3 +19,7 @@
 #import "NSTimer+JKCBlock.h"
 #import "UIColor+JKCUtils.h"
 #import "UIView+JKCUtils.h"
+#import "UIImage+JKCUtils.h"
+#import "UIView+ScreenshotAnimation.h"
+#import "UIViewController+NavItem.h"
+#import "UIButton+JKCUtils.h"

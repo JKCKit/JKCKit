@@ -30,6 +30,10 @@
 		14943395213E2C1A0013B6E1 /* JKCWKWebViewProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14943394213E2C1A0013B6E1 /* JKCWKWebViewProgressViewController.m */; };
 		14943398213E6FF90013B6E1 /* UIBarButtonItem+JKCBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 14943397213E6FF90013B6E1 /* UIBarButtonItem+JKCBlock.m */; };
 		149433D9213F86A60013B6E1 /* NSTimer+JKCBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 149433D8213F86A60013B6E1 /* NSTimer+JKCBlock.m */; };
+		431E87692150D18900D307C7 /* UIImage+JKCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E87662150D18800D307C7 /* UIImage+JKCUtils.m */; };
+		431E876A2150D18900D307C7 /* UIView+ScreenshotAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E87682150D18900D307C7 /* UIView+ScreenshotAnimation.m */; };
+		431E876D2150D58200D307C7 /* UIViewController+NavItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E876C2150D58200D307C7 /* UIViewController+NavItem.m */; };
+		431E87702150E36600D307C7 /* UIButton+JKCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E876F2150E36600D307C7 /* UIButton+JKCUtils.m */; };
 		5B0A00425E266FC793C40947 /* libPods-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF9CF3E79CBD505DA6BA42D /* libPods-Demo.a */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +102,14 @@
 		149433D7213F86A60013B6E1 /* NSTimer+JKCBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+JKCBlock.h"; sourceTree = "<group>"; };
 		149433D8213F86A60013B6E1 /* NSTimer+JKCBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+JKCBlock.m"; sourceTree = "<group>"; };
 		28C906B2EAE0D5E38FDA5EFF /* libPods-DemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		431E87652150D18800D307C7 /* UIImage+JKCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JKCUtils.h"; sourceTree = "<group>"; };
+		431E87662150D18800D307C7 /* UIImage+JKCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JKCUtils.m"; sourceTree = "<group>"; };
+		431E87672150D18800D307C7 /* UIView+ScreenshotAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ScreenshotAnimation.h"; sourceTree = "<group>"; };
+		431E87682150D18900D307C7 /* UIView+ScreenshotAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ScreenshotAnimation.m"; sourceTree = "<group>"; };
+		431E876B2150D58200D307C7 /* UIViewController+NavItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavItem.h"; sourceTree = "<group>"; };
+		431E876C2150D58200D307C7 /* UIViewController+NavItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavItem.m"; sourceTree = "<group>"; };
+		431E876E2150E36600D307C7 /* UIButton+JKCUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+JKCUtils.h"; sourceTree = "<group>"; };
+		431E876F2150E36600D307C7 /* UIButton+JKCUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JKCUtils.m"; sourceTree = "<group>"; };
 		4B40C6F889C4E53DCC2C64CA /* libPods-DemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF9CF3E79CBD505DA6BA42D /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E3CBC75800C7E13AF5F636 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -229,6 +241,14 @@
 				140B36C22146117700497D1D /* UIView+JKCUtils.m */,
 				140B36C42146604C00497D1D /* WKWebView+JKCTipsText.h */,
 				140B36C52146604C00497D1D /* WKWebView+JKCTipsText.m */,
+				431E87652150D18800D307C7 /* UIImage+JKCUtils.h */,
+				431E87662150D18800D307C7 /* UIImage+JKCUtils.m */,
+				431E87672150D18800D307C7 /* UIView+ScreenshotAnimation.h */,
+				431E87682150D18900D307C7 /* UIView+ScreenshotAnimation.m */,
+				431E876B2150D58200D307C7 /* UIViewController+NavItem.h */,
+				431E876C2150D58200D307C7 /* UIViewController+NavItem.m */,
+				431E876E2150E36600D307C7 /* UIButton+JKCUtils.h */,
+				431E876F2150E36600D307C7 /* UIButton+JKCUtils.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -429,15 +449,19 @@
 				140B36B32140C17E00497D1D /* UIColor+JKCUtils.m in Sources */,
 				14943345213646870013B6E1 /* ViewController.m in Sources */,
 				149433D9213F86A60013B6E1 /* NSTimer+JKCBlock.m in Sources */,
+				431E876D2150D58200D307C7 /* UIViewController+NavItem.m in Sources */,
+				431E87702150E36600D307C7 /* UIButton+JKCUtils.m in Sources */,
 				140B36B62142081100497D1D /* UILabel+JKCUtils.m in Sources */,
 				140B36BF21460D1A00497D1D /* JKCTestTableViewCell.m in Sources */,
 				140B36C62146604C00497D1D /* WKWebView+JKCTipsText.m in Sources */,
 				140B36BA21460CF400497D1D /* JKCTestTableViewController.m in Sources */,
 				14943398213E6FF90013B6E1 /* UIBarButtonItem+JKCBlock.m in Sources */,
+				431E87692150D18900D307C7 /* UIImage+JKCUtils.m in Sources */,
 				149433892137CC8D0013B6E1 /* UIAlertController+JKCConvenient.m in Sources */,
 				14943350213646890013B6E1 /* main.m in Sources */,
 				149433862137CB520013B6E1 /* UIControl+JKCBlock.m in Sources */,
 				140B36C32146117700497D1D /* UIView+JKCUtils.m in Sources */,
+				431E876A2150D18900D307C7 /* UIView+ScreenshotAnimation.m in Sources */,
 				1494338F213D34120013B6E1 /* UIControlBlockViewController.m in Sources */,
 				14943392213E17210013B6E1 /* WKWebView+JKCProgressView.m in Sources */,
 				14943395213E2C1A0013B6E1 /* JKCWKWebViewProgressViewController.m in Sources */,

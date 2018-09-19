@@ -6,11 +6,11 @@
 //  Copyright © 2018年 JKC. All rights reserved.
 //
 
-#define BackButtonImageName @"xxx"
+#define BackButtonImageName @"fh_"
 #define DefaultColorOfNavigationBar UIColorFromRGB(0xFF9B17)
 #define DefaultFontOfNavigationBarTitle [UIFont systemFontOfSize:16]
 #define DefaultTextColorOfNavigationBarTitle UIColorFromRGB(0x333333)
-#define DefaultTextColorOfNavigationItem UIColorFromRGB(0xFF9B17)
+#define DefaultTextColorOfNavigationItem UIColorFromRGB(0x333333)
 #define DefaultButtonFontSize 16
 
 

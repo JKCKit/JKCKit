@@ -34,6 +34,7 @@
 		431E876A2150D18900D307C7 /* UIView+ScreenshotAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E87682150D18900D307C7 /* UIView+ScreenshotAnimation.m */; };
 		431E876D2150D58200D307C7 /* UIViewController+NavItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E876C2150D58200D307C7 /* UIViewController+NavItem.m */; };
 		431E87702150E36600D307C7 /* UIButton+JKCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E876F2150E36600D307C7 /* UIButton+JKCUtils.m */; };
+		431E87772151EDA500D307C7 /* fh_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 431E87762151EDA500D307C7 /* fh_@3x.png */; };
 		5B0A00425E266FC793C40947 /* libPods-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF9CF3E79CBD505DA6BA42D /* libPods-Demo.a */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,7 @@
 		431E876C2150D58200D307C7 /* UIViewController+NavItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavItem.m"; sourceTree = "<group>"; };
 		431E876E2150E36600D307C7 /* UIButton+JKCUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+JKCUtils.h"; sourceTree = "<group>"; };
 		431E876F2150E36600D307C7 /* UIButton+JKCUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JKCUtils.m"; sourceTree = "<group>"; };
+		431E87762151EDA500D307C7 /* fh_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fh_@3x.png"; sourceTree = "<group>"; };
 		4B40C6F889C4E53DCC2C64CA /* libPods-DemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF9CF3E79CBD505DA6BA42D /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E3CBC75800C7E13AF5F636 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		1494333F213646870013B6E1 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				431E87762151EDA500D307C7 /* fh_@3x.png */,
 				1494338D213D34120013B6E1 /* UIControlBlockViewController.h */,
 				1494338E213D34120013B6E1 /* UIControlBlockViewController.m */,
 				14943372213646AB0013B6E1 /* JKCKit */,
@@ -379,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140B36C021460D1A00497D1D /* JKCTestTableViewCell.xib in Resources */,
+				431E87772151EDA500D307C7 /* fh_@3x.png in Resources */,
 				1494334D213646890013B6E1 /* LaunchScreen.storyboard in Resources */,
 				1494334A213646890013B6E1 /* Assets.xcassets in Resources */,
 				140B36BB21460CF400497D1D /* JKCTestTableViewController.xib in Resources */,

@@ -8,7 +8,6 @@
 
 #import "UIControlBlockViewController.h"
 #import "JKCKit.h"
-#import "JKCTestTableViewController.h"
 @interface UIControlBlockViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIButton *button;
@@ -28,7 +27,6 @@
         NSLog(@"tap");
     } forControlEvents:UIControlEventTouchUpInside];
     
-    [self.navigationController pushViewController:[JKCTestTableViewController new] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

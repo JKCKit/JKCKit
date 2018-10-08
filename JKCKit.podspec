@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "JKCKit"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "Utils for iOS Coding"
   s.description  = "..."
   s.homepage     = "https://github.com/JKCKit/JKCKit"

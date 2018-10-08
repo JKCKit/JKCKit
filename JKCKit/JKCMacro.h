@@ -27,3 +27,21 @@
 #else
 #define JKCLog(...)
 #endif
+
+#define JKCSingletonH(name) + (instancetype)share##name;
+
+#define JKCSingletonM(name) \
+static id singleton;\
++ (instancetype)share##name {\
+    static dispatch_once_t onceToken;\
+    dispatch_once(&onceToken, ^{\
+        singleton = [[super allocWithZone:nil] init];\
+    });\
+    return singleton;\
+}\
++ (instancetype)allocWithZone:(struct _NSZone *)zone {\
+return [self share##name];\
+}\
+- (id)copy {\
+return [self.class share##name];\
+}\

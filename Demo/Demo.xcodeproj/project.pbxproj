@@ -26,6 +26,7 @@
 		149433D9213F86A60013B6E1 /* NSTimer+JKCBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 149433D8213F86A60013B6E1 /* NSTimer+JKCBlock.m */; };
 		14AA6B762151ED9300EF7228 /* UIGestureRecognizer+JKCBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AA6B742151ED9300EF7228 /* UIGestureRecognizer+JKCBlock.m */; };
 		14AA6B772151ED9300EF7228 /* NSDate+JKCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AA6B752151ED9300EF7228 /* NSDate+JKCUtils.m */; };
+		14F032DC215F2B0B006C6991 /* UIImage+JKCCompression.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F032DB215F2B0B006C6991 /* UIImage+JKCCompression.m */; };
 		431E87692150D18900D307C7 /* UIImage+JKCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E87662150D18800D307C7 /* UIImage+JKCUtils.m */; };
 		431E876A2150D18900D307C7 /* UIView+ScreenshotAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E87682150D18900D307C7 /* UIView+ScreenshotAnimation.m */; };
 		431E876D2150D58200D307C7 /* UIViewController+NavItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E876C2150D58200D307C7 /* UIViewController+NavItem.m */; };
@@ -92,6 +93,8 @@
 		14AA6B732151ED9300EF7228 /* UIGestureRecognizer+JKCBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+JKCBlock.h"; sourceTree = "<group>"; };
 		14AA6B742151ED9300EF7228 /* UIGestureRecognizer+JKCBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+JKCBlock.m"; sourceTree = "<group>"; };
 		14AA6B752151ED9300EF7228 /* NSDate+JKCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKCUtils.m"; sourceTree = "<group>"; };
+		14F032DA215F2B0B006C6991 /* UIImage+JKCCompression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+JKCCompression.h"; sourceTree = "<group>"; };
+		14F032DB215F2B0B006C6991 /* UIImage+JKCCompression.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JKCCompression.m"; sourceTree = "<group>"; };
 		28C906B2EAE0D5E38FDA5EFF /* libPods-DemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		431E87652150D18800D307C7 /* UIImage+JKCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JKCUtils.h"; sourceTree = "<group>"; };
 		431E87662150D18800D307C7 /* UIImage+JKCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JKCUtils.m"; sourceTree = "<group>"; };
@@ -236,6 +239,8 @@
 				431E876C2150D58200D307C7 /* UIViewController+NavItem.m */,
 				431E876E2150E36600D307C7 /* UIButton+JKCUtils.h */,
 				431E876F2150E36600D307C7 /* UIButton+JKCUtils.m */,
+				14F032DA215F2B0B006C6991 /* UIImage+JKCCompression.h */,
+				14F032DB215F2B0B006C6991 /* UIImage+JKCCompression.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -430,6 +435,7 @@
 				14AA6B762151ED9300EF7228 /* UIGestureRecognizer+JKCBlock.m in Sources */,
 				14943392213E17210013B6E1 /* WKWebView+JKCProgressView.m in Sources */,
 				14943395213E2C1A0013B6E1 /* JKCWKWebViewProgressViewController.m in Sources */,
+				14F032DC215F2B0B006C6991 /* UIImage+JKCCompression.m in Sources */,
 				14943342213646870013B6E1 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

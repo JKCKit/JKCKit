@@ -25,3 +25,4 @@
 #import "UIView+ScreenshotAnimation.h"
 #import "UIViewController+NavItem.h"
 #import "UIButton+JKCUtils.h"
+#import "UIImage+JKCCompression.h"

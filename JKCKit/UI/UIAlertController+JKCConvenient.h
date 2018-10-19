@@ -16,10 +16,10 @@ typedef NSDictionary* (^AlertAction)(NSString *title, NSString *message);
                               preferredStyle:(UIAlertControllerStyle)style
                                 cancelAction:( UIAlertAction * _Nonnull )cancelAction, ... NS_REQUIRES_NIL_TERMINATION;
 
-+ (instancetype)jkc_showLoadingAlertWithTitle:( NSString * _Nonnull )title
-                                      message:( NSString * _Nullable )message;
++ (instancetype)jkc_loadingAlertWithTitle:( NSString * _Nonnull )title
+                                  message:( NSString * _Nullable )message;
 
-+ (void)jkc_showProgressAlertWithTitle:( NSString * _Nonnull )title
-                               message:( NSString * _Nullable )message
-                               handler:(void (^)(UIProgressView *progressView, UIAlertController *alertController))handler;
++ (instancetype)jkc_progressAlertWithTitle:( NSString * _Nonnull )title
+                                   message:( NSString * _Nullable )message
+                                   handler:(void (^)(UIProgressView *progressView, UIAlertController *alertController))handler;
 @end

@@ -64,24 +64,36 @@
         }
             break;
         case 2: {
-            UIAlertController *alertController = [UIAlertController jkc_showLoadingAlertWithTitle:@"Title" message:@"message"];
+            UIAlertController *alertController = [UIAlertController jkc_loadingAlertWithTitle:@"Title" message:@"message"];
+            [self presentViewController:alertController animated:YES completion:nil];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [alertController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
             });
         }
             break;
         case 3: {
-            [UIAlertController jkc_showProgressAlertWithTitle:@"Tips" message:@"Downloading..." handler:^(UIProgressView *progressView, UIAlertController *alertController) {
-                [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
-                    if (progressView.progress < 1.0f) {
-                        [progressView setProgress:progressView.progress += 0.1 animated:YES];
-                    } else {
-                        [alertController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-                        [timer invalidate];
-                        NSLog(@"Download Finish");
-                    }
-                }];
+            UIAlertController *alertController = [UIAlertController jkc_progressAlertWithTitle:@"Tips" message:@"Downloading..." handler:^(UIProgressView *progressView, UIAlertController *alertController) {
+                if (@available(iOS 10.0, *)) {
+                    [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+                        if (progressView.progress < 1.0f) {
+                            [progressView setProgress:progressView.progress += 0.1 animated:YES];
+                        } else {
+                            [alertController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+                            [timer invalidate];
+                            NSLog(@"Download Finish");
+                        }
+                    }];
+                } else {
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        [progressView setProgress:1.0f animated:YES];
+                        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                            [alertController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+                            NSLog(@"Download Finish");
+                        });
+                    });
+                }
             }];
+            [self presentViewController:alertController animated:YES completion:nil];
         }
             break;
         case 4: {

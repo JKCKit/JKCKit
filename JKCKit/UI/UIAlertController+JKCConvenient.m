@@ -9,6 +9,8 @@
 #import "UIAlertController+JKCConvenient.h"
 #import "JKCMacro.h"
 
+#define kIsiOS12OrLater ([UIDevice currentDevice].systemVersion.floatValue >= 12.0)
+
 @implementation UIAlertController (JKCConvenient)
 + (instancetype)jkc_alertControllerWithTitle:( NSString * _Nonnull )title
                                      message:( NSString * _Nullable )message
@@ -33,14 +35,23 @@
     return alertController;
 }
 
-+ (instancetype)jkc_showLoadingAlertWithTitle:( NSString * _Nonnull )title
++ (instancetype)jkc_loadingAlertWithTitle:( NSString * _Nonnull )title
                                       message:( NSString * _Nullable )message {
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     
     [self addLoadingWithView:alertController.view];
     
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
+    return alertController;
+}
+
++ (instancetype)jkc_progressAlertWithTitle:( NSString * _Nonnull )title
+                               message:( NSString * _Nullable )message
+                               handler:(void (^)(UIProgressView *progressView, UIAlertController *alertController))handler {
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    [self addProgressViewWithView:alertController.view alertController:alertController handler:handler];
     
     return alertController;
 }
@@ -48,7 +59,7 @@
 #pragma mark Utils -
 + (void)addLoadingWithView:(nonnull UIView *)aView {
     for (UIView *subView in aView.subviews) {
-        if ([subView isKindOfClass:NSClassFromString(@"_UIInterfaceActionGroupHeaderScrollView")]) {
+        if ([subView isKindOfClass:NSClassFromString(@"_UIInterfaceActionGroupHeaderScrollView")] || [subView isKindOfClass:NSClassFromString(@"_UIAlertControllerShadowedScrollView")]) {
             UIActivityIndicatorView *loading = [[UIActivityIndicatorView alloc] init];
             loading.translatesAutoresizingMaskIntoConstraints = NO;
             loading.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
@@ -58,9 +69,10 @@
             if (subView.subviews.count > 0) {
                 UIView *tempView = subView.subviews[0];
                 [tempView addSubview:loading];
-                if (tempView.subviews.count > 2) {
-                    UIView *titleLabel = tempView.subviews[0];
-                    UIView *messageLabel = tempView.subviews[1];
+                NSUInteger captureNumber = (kIsiOS12OrLater ? 3 : 2);
+                if (tempView.subviews.count > captureNumber) {
+                    UIView *titleLabel = tempView.subviews[(kIsiOS12OrLater ? 1 : 0)];
+                    UIView *messageLabel = tempView.subviews[(kIsiOS12OrLater ? 2 : 1)];
                     if ([titleLabel isKindOfClass:[UILabel class]] && !([messageLabel isKindOfClass:[UILabel class]])) {
                         NSLayoutConstraint *constraintX = [NSLayoutConstraint constraintWithItem:loading attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:titleLabel attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
                         NSLayoutConstraint *constraintY = [NSLayoutConstraint constraintWithItem:loading attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:titleLabel attribute:NSLayoutAttributeBottom multiplier:1.0 constant:10];
@@ -85,16 +97,17 @@
                 alertController:(nonnull UIAlertController *)alertController
                         handler:(void (^)(UIProgressView *progressView, UIAlertController *alertController))handler {
     for (UIView *subView in aView.subviews) {
-        if ([subView isKindOfClass:NSClassFromString(@"_UIInterfaceActionGroupHeaderScrollView")]) {
+        if ([subView isKindOfClass:NSClassFromString(@"_UIInterfaceActionGroupHeaderScrollView")] || [subView isKindOfClass:NSClassFromString(@"_UIAlertControllerShadowedScrollView")]) {
             UIProgressView *progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, 270, 50)];
             progressView.translatesAutoresizingMaskIntoConstraints = NO;
             progressView.progressTintColor = [UIApplication sharedApplication].keyWindow.rootViewController.view.tintColor;
             if (subView.subviews.count > 0) {
                 UIView *tempView = subView.subviews[0];
                 [tempView addSubview:progressView];
-                if (tempView.subviews.count > 2) {
-                    UIView *titleLabel = tempView.subviews[0];
-                    UIView *messageLabel = tempView.subviews[1];
+                NSUInteger captureNumber = (kIsiOS12OrLater ? 3 : 2);
+                if (tempView.subviews.count > captureNumber) {
+                    UIView *titleLabel = tempView.subviews[(kIsiOS12OrLater ? 1 : 0)];
+                    UIView *messageLabel = tempView.subviews[(kIsiOS12OrLater ? 2 : 1)];
                     if ([titleLabel isKindOfClass:[UILabel class]] && !([messageLabel isKindOfClass:[UILabel class]])) {
                         NSLayoutConstraint *constraintX = [NSLayoutConstraint constraintWithItem:progressView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:titleLabel attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0];
                         NSLayoutConstraint *constraintY = [NSLayoutConstraint constraintWithItem:progressView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:titleLabel attribute:NSLayoutAttributeBottom multiplier:1.0 constant:10];
@@ -129,16 +142,5 @@
     if (handler) {
         handler(nil, nil);
     }
-}
-
-+ (void)jkc_showProgressAlertWithTitle:( NSString * _Nonnull )title
-                               message:( NSString * _Nullable )message
-                               handler:(void (^)(UIProgressView *progressView, UIAlertController *alertController))handler {
-    
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    
-    [self addProgressViewWithView:alertController.view alertController:alertController handler:handler];
-    
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
 }
 @end

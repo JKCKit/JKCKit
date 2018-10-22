@@ -26,3 +26,5 @@
 #import "UIViewController+NavItem.h"
 #import "UIButton+JKCUtils.h"
 #import "UIImage+JKCCompression.h"
+#import "UITextField+JKCUtils.h"
+#import "UITextView+JKCUtils.h"

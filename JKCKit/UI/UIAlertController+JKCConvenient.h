@@ -8,18 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NSDictionary* (^AlertAction)(NSString *title, NSString *message);
-
 @interface UIAlertController (JKCConvenient)
-+ (instancetype)jkc_alertControllerWithTitle:( NSString * _Nonnull )title
++ (instancetype _Nonnull )jkc_alertControllerWithTitle:( NSString * _Nonnull )title
                                      message:( NSString * _Nullable )message
                               preferredStyle:(UIAlertControllerStyle)style
                                 cancelAction:( UIAlertAction * _Nonnull )cancelAction, ... NS_REQUIRES_NIL_TERMINATION;
 
-+ (instancetype)jkc_showLoadingAlertWithTitle:( NSString * _Nonnull )title
++ (instancetype _Nonnull )jkc_showLoadingAlertWithTitle:( NSString * _Nonnull )title
                                       message:( NSString * _Nullable )message;
 
 + (void)jkc_showProgressAlertWithTitle:( NSString * _Nonnull )title
                                message:( NSString * _Nullable )message
-                               handler:(void (^)(UIProgressView *progressView, UIAlertController *alertController))handler;
+                               handler:(void (^_Nullable)(UIProgressView * _Nullable progressView, UIAlertController * _Nonnull alertController))handler;
 @end

@@ -28,6 +28,8 @@
 #define JKCLog(...)
 #endif
 
+#define JKCSetupSingletonMethod - (void)jkc_setupSingleton
+
 #define JKCSingletonH(name) + (instancetype)share##name;
 
 #define JKCSingletonM(name) \
@@ -36,6 +38,12 @@ static id singleton;\
     static dispatch_once_t onceToken;\
     dispatch_once(&onceToken, ^{\
         singleton = [[super allocWithZone:nil] init];\
+_Pragma("clang diagnostic push")\
+_Pragma("clang diagnostic ignored \"-Wundeclared-selector\"")\
+        if ([singleton respondsToSelector:@selector(jkc_setupSingleton)]) {\
+            [singleton performSelector:@selector(jkc_setupSingleton)];\
+        }\
+_Pragma("clang diagnostic pop") \
     });\
     return singleton;\
 }\

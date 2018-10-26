@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^ActionBlock) (id sender);
+typedef void (^ActionBlock) (id _Nonnull sender);
 
 @interface UIControl (JKCBlock)
-
-@property (nonatomic, copy, readonly) ActionBlock actionBlock;
 
 //点击间隔
 @property (assign, nonatomic) NSTimeInterval acceptEventInterval;

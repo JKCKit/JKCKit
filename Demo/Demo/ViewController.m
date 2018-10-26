@@ -8,6 +8,20 @@
 
 #import "ViewController.h"
 #import "JKCKit.h"
+@interface Test : NSObject
+JKCSingletonH(Instance)
+@end
+
+@implementation Test
+
+JKCSingletonM(Instance);
+
+JKCSetupSingletonMethod {
+    JKCLog(@"%s", __FUNCTION__);
+}
+
+@end
+
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @end
@@ -16,8 +30,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [Test shareInstance];
 }
+
 
 #pragma mark -
 - (NSArray *)tableViewTitles {

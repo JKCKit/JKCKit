@@ -8,15 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^ScheduledActionBlock) (NSTimer *timer);
+typedef void (^ScheduledActionBlock) (NSTimer * _Nonnull timer);
 
-typedef void (^NormalActionBlock) (NSTimer *timer);
+typedef void (^NormalActionBlock) (NSTimer * _Nonnull timer);
 
 @interface NSTimer (JKCBlock)
-
-@property (class, nonatomic, copy, readonly) ScheduledActionBlock scheduledActionBlock;
-
-@property (class, nonatomic, copy, readonly) NormalActionBlock normalActionBlock;
 
 + (void)jkc_scheduledTimerWithTimeInterval:(NSTimeInterval)ti
                                   userInfo:(nullable id)userInfo

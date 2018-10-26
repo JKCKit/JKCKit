@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name         = "JKCKit"
   s.version      = "0.0.10"
-  s.summary      = "Utils for iOS Coding"
-  s.description  = "..."
+  s.summary      = ""
+  s.description  = "Utils for iOS Coding"
   s.homepage     = "https://github.com/JKCKit/JKCKit"
   s.license      = "MIT"
   s.author       = { "Kopus" => "421183082@qq.com" }

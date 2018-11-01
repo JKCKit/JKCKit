@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		140B36B32140C17E00497D1D /* UIColor+JKCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 140B36B22140C17E00497D1D /* UIColor+JKCUtils.m */; };
 		140B36C32146117700497D1D /* UIView+JKCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 140B36C22146117700497D1D /* UIView+JKCUtils.m */; };
+		1435DE17218AF5CE0066E323 /* UIView+JKCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1435DE16218AF5CE0066E323 /* UIView+JKCViewController.m */; };
 		148A01C6217DB85800ED9EB3 /* UITextField+JKCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 148A01C5217DB85800ED9EB3 /* UITextField+JKCUtils.m */; };
 		148A01C9217DB8B800ED9EB3 /* UITextView+JKCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 148A01C8217DB8B800ED9EB3 /* UITextView+JKCUtils.m */; };
 		14943342213646870013B6E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14943341213646870013B6E1 /* AppDelegate.m */; };
@@ -59,6 +60,8 @@
 		140B36B22140C17E00497D1D /* UIColor+JKCUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JKCUtils.m"; sourceTree = "<group>"; };
 		140B36C12146117700497D1D /* UIView+JKCUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+JKCUtils.h"; sourceTree = "<group>"; };
 		140B36C22146117700497D1D /* UIView+JKCUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKCUtils.m"; sourceTree = "<group>"; };
+		1435DE15218AF5CE0066E323 /* UIView+JKCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+JKCViewController.h"; sourceTree = "<group>"; };
+		1435DE16218AF5CE0066E323 /* UIView+JKCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKCViewController.m"; sourceTree = "<group>"; };
 		148A01C4217DB85800ED9EB3 /* UITextField+JKCUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+JKCUtils.h"; sourceTree = "<group>"; };
 		148A01C5217DB85800ED9EB3 /* UITextField+JKCUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+JKCUtils.m"; sourceTree = "<group>"; };
 		148A01C7217DB8B800ED9EB3 /* UITextView+JKCUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+JKCUtils.h"; sourceTree = "<group>"; };
@@ -251,6 +254,8 @@
 				148A01C5217DB85800ED9EB3 /* UITextField+JKCUtils.m */,
 				148A01C7217DB8B800ED9EB3 /* UITextView+JKCUtils.h */,
 				148A01C8217DB8B800ED9EB3 /* UITextView+JKCUtils.m */,
+				1435DE15218AF5CE0066E323 /* UIView+JKCViewController.h */,
+				1435DE16218AF5CE0066E323 /* UIView+JKCViewController.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -446,6 +451,7 @@
 				1494338F213D34120013B6E1 /* UIControlBlockViewController.m in Sources */,
 				14AA6B762151ED9300EF7228 /* UIGestureRecognizer+JKCBlock.m in Sources */,
 				14943392213E17210013B6E1 /* WKWebView+JKCProgressView.m in Sources */,
+				1435DE17218AF5CE0066E323 /* UIView+JKCViewController.m in Sources */,
 				14943395213E2C1A0013B6E1 /* JKCWKWebViewProgressViewController.m in Sources */,
 				14F032DC215F2B0B006C6991 /* UIImage+JKCCompression.m in Sources */,
 				14943342213646870013B6E1 /* AppDelegate.m in Sources */,
@@ -621,7 +627,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N6YUXNM9Y6;
 				INFOPLIST_FILE = Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -640,7 +646,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N6YUXNM9Y6;
 				INFOPLIST_FILE = Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

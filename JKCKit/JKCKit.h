@@ -28,3 +28,4 @@
 #import "UIImage+JKCCompression.h"
 #import "UITextField+JKCUtils.h"
 #import "UITextView+JKCUtils.h"
+#import "UIView+JKCViewController.h"

@@ -15,26 +15,29 @@ static const char *UIControl_acceptEventInterval = "UIControl_acceptEventInterva
 @implementation UIControl (JKCBlock)
 
 - (NSDictionary <NSNumber *, NSString *> *)selectors {
-    return @{@(UIControlEventTouchDown) : @"jkc_controlAction_UIControlEventTouchDown:",
-             @(UIControlEventTouchDownRepeat) : @"jkc_controlAction_UIControlEventTouchDownRepeat:",
-             @(UIControlEventTouchDragInside) : @"jkc_controlAction_UIControlEventTouchDragInside:",
-             @(UIControlEventTouchDragOutside) : @"jkc_controlAction_UIControlEventTouchDragOutside:",
-             @(UIControlEventTouchDragEnter) : @"jkc_controlAction_UIControlEventTouchDragEnter:",
-             @(UIControlEventTouchDragExit) : @"jkc_controlAction_UIControlEventTouchDragExit:",
-             @(UIControlEventTouchUpInside) : @"jkc_controlAction_UIControlEventTouchUpInside:",
-             @(UIControlEventTouchUpOutside) : @"jkc_controlAction_UIControlEventTouchUpOutside:",
-             @(UIControlEventValueChanged) : @"jkc_controlAction_UIControlEventValueChanged:",
-             @(UIControlEventPrimaryActionTriggered) : @"jkc_controlAction_UIControlEventPrimaryActionTriggered:",
-             @(UIControlEventEditingDidBegin) : @"jkc_controlAction_UIControlEventEditingDidBegin:",
-             @(UIControlEventEditingChanged) : @"jkc_controlAction_UIControlEventEditingChanged:",
-             @(UIControlEventEditingDidEnd) : @"jkc_controlAction_UIControlEventEditingDidEnd:",
-             @(UIControlEventEditingDidEndOnExit) : @"jkc_controlAction_UIControlEventEditingDidEndOnExit:",
-             @(UIControlEventAllTouchEvents) : @"jkc_controlAction_UIControlEventAllTouchEvents:",
-             @(UIControlEventAllEditingEvents) : @"jkc_controlAction_UIControlEventAllEditingEvents:",
-             @(UIControlEventApplicationReserved) : @"jkc_controlAction_UIControlEventApplicationReserved:",
-             @(UIControlEventSystemReserved) : @"jkc_controlAction_UIControlEventSystemReserved:",
-             @(UIControlEventAllEvents) : @"jkc_controlAction_UIControlEventAllEvents:",
-             };
+    NSMutableDictionary *selctors = [NSMutableDictionary dictionaryWithDictionary:@{@(UIControlEventTouchDown) : @"jkc_controlAction_UIControlEventTouchDown:",
+                                                                                    @(UIControlEventTouchDownRepeat) : @"jkc_controlAction_UIControlEventTouchDownRepeat:",
+                                                                                    @(UIControlEventTouchDragInside) : @"jkc_controlAction_UIControlEventTouchDragInside:",
+                                                                                    @(UIControlEventTouchDragOutside) : @"jkc_controlAction_UIControlEventTouchDragOutside:",
+                                                                                    @(UIControlEventTouchDragEnter) : @"jkc_controlAction_UIControlEventTouchDragEnter:",
+                                                                                    @(UIControlEventTouchDragExit) : @"jkc_controlAction_UIControlEventTouchDragExit:",
+                                                                                    @(UIControlEventTouchUpInside) : @"jkc_controlAction_UIControlEventTouchUpInside:",
+                                                                                    @(UIControlEventTouchUpOutside) : @"jkc_controlAction_UIControlEventTouchUpOutside:",
+                                                                                    @(UIControlEventValueChanged) : @"jkc_controlAction_UIControlEventValueChanged:",
+                                                                                    @(UIControlEventEditingDidBegin) : @"jkc_controlAction_UIControlEventEditingDidBegin:",
+                                                                                    @(UIControlEventEditingChanged) : @"jkc_controlAction_UIControlEventEditingChanged:",
+                                                                                    @(UIControlEventEditingDidEnd) : @"jkc_controlAction_UIControlEventEditingDidEnd:",
+                                                                                    @(UIControlEventEditingDidEndOnExit) : @"jkc_controlAction_UIControlEventEditingDidEndOnExit:",
+                                                                                    @(UIControlEventAllTouchEvents) : @"jkc_controlAction_UIControlEventAllTouchEvents:",
+                                                                                    @(UIControlEventAllEditingEvents) : @"jkc_controlAction_UIControlEventAllEditingEvents:",
+                                                                                    @(UIControlEventApplicationReserved) : @"jkc_controlAction_UIControlEventApplicationReserved:",
+                                                                                    @(UIControlEventSystemReserved) : @"jkc_controlAction_UIControlEventSystemReserved:",
+                                                                                    @(UIControlEventAllEvents) : @"jkc_controlAction_UIControlEventAllEvents:",
+                                                                                    }];
+    if (@available(iOS 9.0, *)) {
+        selctors[@(UIControlEventPrimaryActionTriggered)] = @"jkc_controlAction_UIControlEventPrimaryActionTriggered:";
+    }
+    return selctors.copy;;
 }
 
 - (NSMutableDictionary <NSNumber *, ActionBlock> *)blocks {
@@ -117,9 +120,13 @@ static const char *UIControl_acceptEventInterval = "UIControl_acceptEventInterva
     }
 }
 - (void)jkc_controlAction_UIControlEventPrimaryActionTriggered:(id)sender {
-    ActionBlock targetBlock = [self blocks][@(UIControlEventPrimaryActionTriggered)];
-    if (targetBlock) {
-        targetBlock(sender);
+    if (@available(iOS 9.0, *)) {
+        ActionBlock targetBlock = [self blocks][@(UIControlEventPrimaryActionTriggered)];
+        if (targetBlock) {
+            targetBlock(sender);
+        }
+    } else {
+        // Fallback on earlier versions
     }
 }
 - (void)jkc_controlAction_UIControlEventEditingDidBegin:(id)sender {

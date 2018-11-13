@@ -9,29 +9,174 @@
 #import "UIControl+JKCBlock.h"
 #import <objc/runtime.h>
 
-static NSString *key = @"Block";
+static NSString *UIControl_BlocksKey = @"BlocksKey";
 static const char *UIControl_acceptEventInterval = "UIControl_acceptEventInterval";
 
 @implementation UIControl (JKCBlock)
 
+- (NSDictionary <NSNumber *, NSString *> *)selectors {
+    return @{@(UIControlEventTouchDown) : @"jkc_controlAction_UIControlEventTouchDown:",
+             @(UIControlEventTouchDownRepeat) : @"jkc_controlAction_UIControlEventTouchDownRepeat:",
+             @(UIControlEventTouchDragInside) : @"jkc_controlAction_UIControlEventTouchDragInside:",
+             @(UIControlEventTouchDragOutside) : @"jkc_controlAction_UIControlEventTouchDragOutside:",
+             @(UIControlEventTouchDragEnter) : @"jkc_controlAction_UIControlEventTouchDragEnter:",
+             @(UIControlEventTouchDragExit) : @"jkc_controlAction_UIControlEventTouchDragExit:",
+             @(UIControlEventTouchUpInside) : @"jkc_controlAction_UIControlEventTouchUpInside:",
+             @(UIControlEventTouchUpOutside) : @"jkc_controlAction_UIControlEventTouchUpOutside:",
+             @(UIControlEventValueChanged) : @"jkc_controlAction_UIControlEventValueChanged:",
+             @(UIControlEventPrimaryActionTriggered) : @"jkc_controlAction_UIControlEventPrimaryActionTriggered:",
+             @(UIControlEventEditingDidBegin) : @"jkc_controlAction_UIControlEventEditingDidBegin:",
+             @(UIControlEventEditingChanged) : @"jkc_controlAction_UIControlEventEditingChanged:",
+             @(UIControlEventEditingDidEnd) : @"jkc_controlAction_UIControlEventEditingDidEnd:",
+             @(UIControlEventEditingDidEndOnExit) : @"jkc_controlAction_UIControlEventEditingDidEndOnExit:",
+             @(UIControlEventAllTouchEvents) : @"jkc_controlAction_UIControlEventAllTouchEvents:",
+             @(UIControlEventAllEditingEvents) : @"jkc_controlAction_UIControlEventAllEditingEvents:",
+             @(UIControlEventApplicationReserved) : @"jkc_controlAction_UIControlEventApplicationReserved:",
+             @(UIControlEventSystemReserved) : @"jkc_controlAction_UIControlEventSystemReserved:",
+             @(UIControlEventAllEvents) : @"jkc_controlAction_UIControlEventAllEvents:",
+             };
+}
+
+- (NSMutableDictionary <NSNumber *, ActionBlock> *)blocks {
+    return objc_getAssociatedObject(self, (__bridge const void * _Nonnull)(UIControl_BlocksKey));
+}
+
+#pragma mark -
+
 - (void)jkc_addActionBlock:(_Nonnull ActionBlock)actionBlock
           forControlEvents:(UIControlEvents)controlEvents {
     if (actionBlock) {
-        objc_setAssociatedObject(self, (__bridge const void * _Nonnull)(key), actionBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
-        [self addTarget:self action:@selector(jkc_actionBlock:) forControlEvents:controlEvents];
+        if (![self blocks]) {
+            objc_setAssociatedObject(self, (__bridge const void * _Nonnull)(UIControl_BlocksKey), [NSMutableDictionary dictionary], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        }
+        [self blocks][@(controlEvents)] = actionBlock;
+        [self addTarget:self action:NSSelectorFromString([self selectors][@(controlEvents)]) forControlEvents:controlEvents];
     }
 }
 
-- (ActionBlock)actionBlock {
-    return objc_getAssociatedObject(self, (__bridge const void * _Nonnull)(key));
-}
+#pragma mark -
 
-- (void)jkc_actionBlock:(id)sender {
-    if (self.actionBlock) {
-        self.actionBlock(sender);
+- (void)jkc_controlAction_UIControlEventTouchDown:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventTouchDown)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}
+- (void)jkc_controlAction_UIControlEventTouchDownRepeat:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventTouchDownRepeat)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}
+- (void)jkc_controlAction_UIControlEventTouchDragInside:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventTouchDragInside)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}
+- (void)jkc_controlAction_UIControlEventTouchDragOutside:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventTouchDragOutside)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}
+- (void)jkc_controlAction_UIControlEventTouchDragEnter:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventTouchDragEnter)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}
+- (void)jkc_controlAction_UIControlEventTouchDragExit:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventTouchDragExit)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}
+- (void)jkc_controlAction_UIControlEventTouchUpInside:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventTouchUpInside)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}
+- (void)jkc_controlAction_UIControlEventTouchUpOutside:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventTouchUpOutside)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}
+- (void)jkc_controlAction_UIControlEventTouchCancel:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventTouchCancel)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}
+- (void)jkc_controlAction_UIControlEventValueChanged:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventValueChanged)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}
+- (void)jkc_controlAction_UIControlEventPrimaryActionTriggered:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventPrimaryActionTriggered)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}
+- (void)jkc_controlAction_UIControlEventEditingDidBegin:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventEditingDidBegin)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}
+- (void)jkc_controlAction_UIControlEventEditingChanged:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventEditingChanged)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}- (void)jkc_controlAction_UIControlEventEditingDidEnd:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventEditingDidEnd)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}
+- (void)jkc_controlAction_UIControlEventEditingDidEndOnExit:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventEditingDidEndOnExit)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}
+- (void)jkc_controlAction_UIControlEventAllTouchEvents:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventAllTouchEvents)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}
+- (void)jkc_controlAction_UIControlEventAllEditingEvents:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventAllEditingEvents)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}
+- (void)jkc_controlAction_UIControlEventApplicationReserved:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventApplicationReserved)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}
+- (void)jkc_controlAction_UIControlEventSystemReserved:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventSystemReserved)];
+    if (targetBlock) {
+        targetBlock(sender);
+    }
+}
+- (void)jkc_controlAction_UIControlEventAllEvents:(id)sender {
+    ActionBlock targetBlock = [self blocks][@(UIControlEventAllEvents)];
+    if (targetBlock) {
+        targetBlock(sender);
     }
 }
 
+#pragma mark -
 
 - (NSTimeInterval)acceptEventInterval
 {
